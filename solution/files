@@ -1,0 +1,9 @@
+Map<String, Object> prefMap = new HashMap<>();
+prefMap.put("profile.default_content_settings.popups", 0);
+prefMap.put("download.default_directory", new File(("target/downloads")).getAbsolutePath());
+prefMap.put("download.prompt_for_download", false);
+prefMap.put("download.directory_upgrade", true);
+prefMap.put("safebrowsing.enabled", false);
+
+ChromeOptions options = new ChromeOptions();
+options.setExperimentalOption("prefs", prefMap);
