@@ -3,9 +3,7 @@
     <test name="Auth">
         <parameter name="param" value="value"/>
         <classes>
-
-            <class name="ua.hillel.test.testngTest.BeforeAfterActions1"/>
-            <class name="ua.hillel.test.testngTest.BeforeAfterActions2"/>
+            <class name="ua.hillel.test.wdTest.LoginTestPO"/>
         </classes>
     </test>
 </suite>
