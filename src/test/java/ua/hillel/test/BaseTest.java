@@ -27,6 +27,7 @@ public class BaseTest {
   @BeforeClass
   @Parameters("browser")
   public void setUp(String browser) {
+    System.out.println(browser);
     if (browser.equals("chrome")) {
       WebDriverManager.chromedriver().setup();
 
@@ -42,10 +43,10 @@ public class BaseTest {
       DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setCapability("browserName", "chrome");
       capabilities.setCapability("browserVersion", "98.0");
-      capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-          "enableVNC", true,
-          "enableVideo", false
-      ));
+      Map<String, Object> map = new HashMap<>();
+      map.put("enableVNC", true);
+      map.put("enableVideo", false);
+      capabilities.setCapability("selenoid:options", map);
       try {
         driver = new RemoteWebDriver(
             URI.create("http://192.168.4.42:4444/wd/hub").toURL(),

@@ -33,21 +33,21 @@ public class DriverSingleton {
     this.driver = new ChromeDriver(options);
 
 
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("browserName", "chrome");
-    capabilities.setCapability("browserVersion", "98.0");
-    capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-        "enableVNC", true,
-        "enableVideo", false
-    ));
-    try {
-      driver = new RemoteWebDriver(
-          URI.create("http://192.168.4.42:4444/wd/hub").toURL(),
-          capabilities
-      );
-    } catch (MalformedURLException m) {
-      m.printStackTrace();
-    }
+//    DesiredCapabilities capabilities = new DesiredCapabilities();
+//    capabilities.setCapability("browserName", "chrome");
+//    capabilities.setCapability("browserVersion", "98.0");
+//    capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+//        "enableVNC", true,
+//        "enableVideo", false
+//    ));
+//    try {
+//      driver = new RemoteWebDriver(
+//          URI.create("http://192.168.4.42:4444/wd/hub").toURL(),
+//          capabilities
+//      );
+//    } catch (MalformedURLException m) {
+//      m.printStackTrace();
+//    }
 
   }
 
