@@ -27,15 +27,5 @@ public class WebDriverTest {
     driver.getTitle();
     driver.quit();
 
-
-
-    List<WebElement> cells = driver.findElements(By.xpath("//table/tbody/tr/td[4]"));
-
-    for (WebElement cell : cells) {
-      cell.getText();
-    }
-
-    cells.stream().map(c -> c.getText()).forEach(System.out::println);
-
   }
 }
