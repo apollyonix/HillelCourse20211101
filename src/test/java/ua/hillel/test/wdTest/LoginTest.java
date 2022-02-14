@@ -26,7 +26,7 @@ public class LoginTest extends BaseTest {
 
     WebElement alert = new WebDriverWait(driver, 10)
         .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".flash.success")));
-    Assert.assertTrue(alert.getText()
+    Assert.assertFalse(alert.getText()
                           .contains("You logged into a secure area!"),
                       "User should be logged in");
   }
